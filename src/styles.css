@@ -6,3 +6,42 @@
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
 }
+
+.invisible {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  background: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+  color: var(--white);
+}
+
+.bg-medium-grey {
+  background-color: var(--medium-grey);
+}
+
+.cartao {
+  background: var(--dark-blue);
+}
+
+span,
+p {
+  color: var(--light-grey);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
