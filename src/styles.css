@@ -5,10 +5,7 @@
   --medium-grey: hsl(216, 12%, 54%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
-}
-
-.invisible {
-  display: none;
+  --rounded-background: hsla(216, 12%, 54%, 0.2);
 }
 
 .attribution {
@@ -24,24 +21,117 @@ body {
   font-family: "Overpass", sans-serif;
   font-weight: 400;
   background: var(--very-dark-blue);
+  height: 98vh;
+  color: var(--white);
+  transition: 0.4s;
+}
+
+main {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 98vh;
-  color: var(--white);
 }
 
-.bg-medium-grey {
-  background-color: var(--medium-grey);
+p {
+  color: var(--medium-grey);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+#star-icon {
+  background-color: var(--rounded-background);
+  display: flex;
+  align-self: start;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  clip-path: circle();
+  margin-bottom: 1rem;
 }
 
 .cartao {
   background: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 350px;
+  border-radius: 1rem;
 }
 
-span,
-p {
-  color: var(--light-grey);
-  font-weight: 400;
-  font-size: 0.9rem;
+.thank-you-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+#selected-rating {
+  background-color: var(--rounded-background);
+  color: var(--orange);
+  padding: 0.6rem 0.7rem 0.5rem;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+}
+
+#thank-you-state h2 {
+  padding: 0.7rem 0 0.5rem;
+}
+
+#ratings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#ratings input[type="radio"] {
+  display: none;
+}
+
+#ratings label {
+  background-color: var(--rounded-background);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--medium-grey);
+  padding: 1.1rem;
+  clip-path: circle();
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+#ratings label:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+#ratings label:active {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+#ratings input[type="radio"]:checked + label {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+#btn {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem;
+  color: var(--white);
+  background-color: var(--orange);
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: 0.1s;
+}
+
+#btn:hover {
+  background-color: var(--white);
+  color: var(--orange);
 }
